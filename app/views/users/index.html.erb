@@ -1,0 +1,26 @@
+
+
+<div class="row">
+<h1>Users</h1>
+	<div class="container">
+	<table class="table table-inverse">
+			<thead>
+				<tr>
+
+					<th>Name</th>
+					<th>Email</th>
+					<th>Create at</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @users.each do |user| %>
+				<tr>
+					<td><%=user.name%></td>
+					<td><%=user.email%></td>
+					<td><%= time_ago_in_words user.created_at %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
